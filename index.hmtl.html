@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #88b966}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #9ba2b1}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #d65562}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #c58853}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #9ba2b1; min-height: 16.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #4a505d}
+    span.s1 {color: #b85dd5}
+    span.s2 {color: #d65562}
+    span.s3 {color: #c58853}
+    span.s4 {color: #88b966}
+    span.s5 {color: #9ba2b1}
+    span.s6 {color: #4a505d}
+    span.s7 {color: #48a8b5}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype <span class="s1">html</span>&gt;</p>
+<p class="p2">&lt;<span class="s2">html</span> <span class="s3">lang</span>=<span class="s4">"en"</span>&gt;</p>
+<p class="p3"><span class="s5">&lt;</span>head<span class="s5">&gt;</span></p>
+<p class="p2"><span class="Apple-converted-space">  </span>&lt;<span class="s2">meta</span> <span class="s3">charset</span>=<span class="s4">"utf-8"</span> /&gt;</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">  </span>&lt;</span><span class="s2">meta</span><span class="s5"> </span><span class="s3">name</span><span class="s5">=</span>"viewport"<span class="s5"> </span><span class="s3">content</span><span class="s5">=</span>"width=device-width, initial-scale=1"<span class="s5"> /&gt;</span></p>
+<p class="p2"><span class="Apple-converted-space">  </span>&lt;<span class="s2">title</span>&gt;Sports Ticker&lt;/<span class="s2">title</span>&gt;</p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span>&lt;</span>style<span class="s5">&gt;</span></p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">:root</span> {</p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">color-scheme</span>: dark;</p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s3">--bg</span>: <span class="s3">#000</span>;</p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>--fg<span class="s5">: </span>#eaeaea<span class="s5">;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>--muted<span class="s5">: </span>#9aa0a6<span class="s5">;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>--accent<span class="s5">: </span>#57a0ff<span class="s5">;</span></p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s3">--row</span>: rgba(<span class="s3">255</span>,<span class="s3">255</span>,<span class="s3">255</span>,<span class="s3">0.06</span>);</p>
+<p class="p2"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s2">html</span>, <span class="s2">body</span> { <span class="s4">height</span>: <span class="s3">100%</span>; <span class="s4">margin</span>: <span class="s3">0</span>; <span class="s4">background</span>: var(--bg); <span class="s4">color</span>: var(--fg); <span class="s4">font-family</span>: -apple-system, system-ui, Segoe UI, Roboto, Arial, sans-serif; }</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.wrap</span> { <span class="s4">height</span>: <span class="s3">100%</span>; <span class="s4">display</span>: flex; <span class="s4">flex-direction</span>: column; <span class="s4">padding</span>: <span class="s3">18px</span> <span class="s3">18px</span> <span class="s3">14px</span>; <span class="s4">box-sizing</span>: border-box; }</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.top</span> {</p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">display</span>: flex; <span class="s4">align-items</span>: baseline; <span class="s4">justify-content</span>: space-between; <span class="s4">gap</span>: <span class="s3">12px</span>;</p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">padding-bottom</span>: <span class="s3">12px</span>; <span class="s4">border-bottom</span>: <span class="s3">1px</span> solid rgba(<span class="s3">255</span>,<span class="s3">255</span>,<span class="s3">255</span>,<span class="s3">0.10</span>);</p>
+<p class="p2"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">.league</span><span class="s5"> { </span>font-size<span class="s5">: </span><span class="s3">34px</span><span class="s5">; </span>font-weight<span class="s5">: </span><span class="s3">700</span><span class="s5">; </span>letter-spacing<span class="s5">: </span><span class="s3">0.3px</span><span class="s5">; }</span></p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.meta</span> { <span class="s4">text-align</span>: right; }</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.clock</span> { <span class="s4">font-size</span>: <span class="s3">22px</span>; <span class="s4">font-weight</span>: <span class="s3">600</span>; <span class="s4">color</span>: var(--fg); }</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.status</span> { <span class="s4">font-size</span>: <span class="s3">14px</span>; <span class="s4">color</span>: var(--muted); <span class="s4">margin-top</span>: <span class="s3">2px</span>; }</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.list</span> { <span class="s4">flex</span>: <span class="s3">1</span>; <span class="s4">overflow</span>: hidden; <span class="s4">padding-top</span>: <span class="s3">14px</span>; }</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.row</span> {</p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">display</span>: grid;</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">      </span></span>grid-template-columns<span class="s5">: </span><span class="s3">1</span><span class="s5">fr auto;</span></p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">gap</span>: <span class="s3">14px</span>;</p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">align-items</span>: center;</p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">padding</span>: <span class="s3">14px</span> <span class="s3">14px</span>;</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">      </span></span>border-radius<span class="s5">: </span><span class="s3">14px</span><span class="s5">;</span></p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">background</span>: var(--row);</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">      </span></span>margin-bottom<span class="s5">: </span><span class="s3">10px</span><span class="s5">;</span></p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">transform</span>: translateX(var(--shift, <span class="s3">0px</span>)); <span class="s6">/* burn-in mitigation */</span></p>
+<p class="p2"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">.teams</span><span class="s5"> { </span>font-size<span class="s5">: </span><span class="s3">22px</span><span class="s5">; </span>line-height<span class="s5">: </span><span class="s3">1.25</span><span class="s5">; }</span></p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.sub</span> { <span class="s4">font-size</span>: <span class="s3">14px</span>; <span class="s4">color</span>: var(--muted); <span class="s4">margin-top</span>: <span class="s3">6px</span>; }</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.right</span> { <span class="s4">text-align</span>: right; }</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">.score</span><span class="s5"> { </span>font-size<span class="s5">: </span><span class="s3">26px</span><span class="s5">; </span>font-weight<span class="s5">: </span><span class="s3">800</span><span class="s5">; }</span></p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.state</span> { <span class="s4">font-size</span>: <span class="s3">14px</span>; <span class="s4">color</span>: var(--muted); <span class="s4">margin-top</span>: <span class="s3">6px</span>; }</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.pill</span> {</p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">display</span>: inline-block; <span class="s4">margin-left</span>: <span class="s3">8px</span>; <span class="s4">padding</span>: <span class="s3">2px</span> <span class="s3">8px</span>;</p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s4">border-radius</span>: <span class="s3">999px</span>; <span class="s4">background</span>: rgba(<span class="s3">87</span>,<span class="s3">160</span>,<span class="s3">255</span>,<span class="s3">0.16</span>); <span class="s4">color</span>: var(--accent);</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">      </span></span>font-size<span class="s5">: </span><span class="s3">12px</span><span class="s5">; </span>font-weight<span class="s5">: </span><span class="s3">700</span><span class="s5">; </span>vertical-align<span class="s5">: middle;</span></p>
+<p class="p2"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.footer</span> { <span class="s4">display</span>:flex; <span class="s4">justify-content</span>: space-between; <span class="s4">color</span>: var(--muted); <span class="s4">font-size</span>: <span class="s3">12px</span>; <span class="s4">padding-top</span>: <span class="s3">10px</span>; }</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s3">.err</span> { <span class="s4">color</span>: <span class="s3">#ff6b6b</span>; }</p>
+<p class="p2"><span class="Apple-converted-space">  </span>&lt;/<span class="s2">style</span>&gt;</p>
+<p class="p3"><span class="s5">&lt;/</span>head<span class="s5">&gt;</span></p>
+<p class="p3"><span class="s5">&lt;</span>body<span class="s5">&gt;</span></p>
+<p class="p2"><span class="Apple-converted-space">  </span>&lt;<span class="s2">div</span> <span class="s3">class</span>=<span class="s4">"wrap"</span>&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>&lt;<span class="s2">div</span> <span class="s3">class</span>=<span class="s4">"top"</span>&gt;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>&lt;<span class="s2">div</span>&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span>&lt;<span class="s2">div</span> <span class="s3">class</span>=<span class="s4">"league"</span> <span class="s3">id</span>=<span class="s4">"leagueName"</span>&gt;Loading…&lt;/<span class="s2">div</span>&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span>&lt;<span class="s2">div</span> <span class="s3">class</span>=<span class="s4">"status"</span> <span class="s3">id</span>=<span class="s4">"leagueSub"</span>&gt;Fetching scores&lt;/<span class="s2">div</span>&gt;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>&lt;/<span class="s2">div</span>&gt;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>&lt;<span class="s2">div</span> <span class="s3">class</span>=<span class="s4">"meta"</span>&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span>&lt;<span class="s2">div</span> <span class="s3">class</span>=<span class="s4">"clock"</span> <span class="s3">id</span>=<span class="s4">"clock"</span>&gt;--:--&lt;/<span class="s2">div</span>&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span>&lt;<span class="s2">div</span> <span class="s3">class</span>=<span class="s4">"status"</span> <span class="s3">id</span>=<span class="s4">"nextUp"</span>&gt;Next rotation in 60s&lt;/<span class="s2">div</span>&gt;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>&lt;/<span class="s2">div</span>&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>&lt;/<span class="s2">div</span>&gt;</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">    </span>&lt;<span class="s2">div</span> <span class="s3">class</span>=<span class="s4">"list"</span> <span class="s3">id</span>=<span class="s4">"list"</span>&gt;&lt;/<span class="s2">div</span>&gt;</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">    </span>&lt;<span class="s2">div</span> <span class="s3">class</span>=<span class="s4">"footer"</span>&gt;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>&lt;<span class="s2">div</span> <span class="s3">id</span>=<span class="s4">"source"</span>&gt;Source: ESPN scoreboards&lt;/<span class="s2">div</span>&gt;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>&lt;<span class="s2">div</span> <span class="s3">id</span>=<span class="s4">"hint"</span>&gt;Tip: set tablet brightness low + dark mode&lt;/<span class="s2">div</span>&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>&lt;/<span class="s2">div</span>&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span>&lt;/<span class="s2">div</span>&gt;</p>
+<p class="p5"><br></p>
+<p class="p3"><span class="s5">&lt;</span>script<span class="s5">&gt;</span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">  </span></span>// League rotation (edit this array if you want to add/remove leagues)</p>
+<p class="p2"><span class="Apple-converted-space">  </span><span class="s1">const</span> ROTATION = [</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span>{ </span><span class="s3">key</span><span class="s5">: </span>"NHL"<span class="s5">, </span><span class="s3">url</span><span class="s5">: </span>"https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard"<span class="s5"> },</span></p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span>{ </span><span class="s3">key</span><span class="s5">: </span>"NBA"<span class="s5">, </span><span class="s3">url</span><span class="s5">: </span>"https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"<span class="s5"> },</span></p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span>{ </span><span class="s3">key</span><span class="s5">: </span>"NFL"<span class="s5">, </span><span class="s3">url</span><span class="s5">: </span>"https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"<span class="s5"> },</span></p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span>{ </span><span class="s3">key</span><span class="s5">: </span>"MLB"<span class="s5">, </span><span class="s3">url</span><span class="s5">: </span>"https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard"<span class="s5"> }</span></p>
+<p class="p2"><span class="Apple-converted-space">  </span>];</p>
+<p class="p5"><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">const</span><span class="s5"> ROTATE_MS = </span><span class="s3">60_000</span><span class="s5">; <span class="Apple-converted-space">    </span></span>// switch leagues every minute</p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">const</span><span class="s5"> REFRESH_MS = </span><span class="s3">30_000</span><span class="s5">;<span class="Apple-converted-space">    </span></span>// refresh current league data (keeps it “live”)</p>
+<p class="p2"><span class="Apple-converted-space">  </span><span class="s1">const</span> MAX_ROWS = <span class="s3">8</span>; <span class="Apple-converted-space">          </span><span class="s6">// how many games to show</span></p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span><span class="s1">let</span> idx = <span class="s3">0</span>;</p>
+<p class="p2"><span class="Apple-converted-space">  </span><span class="s1">let</span> refreshTimer = <span class="s7">null</span>;</p>
+<p class="p2"><span class="Apple-converted-space">  </span><span class="s1">let</span> rotateTimer = <span class="s7">null</span>;</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span><span class="s1">const</span> $ = (id) =&gt; document.getElementById(id);</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span><span class="s1">function</span> fmtClock(d=<span class="s1">new</span> Date()) {</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">return</span> d.toLocaleTimeString([], {<span class="s3">hour</span>: <span class="s4">"2-digit"</span>, <span class="s3">minute</span>: <span class="s4">"2-digit"</span>});</p>
+<p class="p2"><span class="Apple-converted-space">  </span>}</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span><span class="s1">function</span> safeText(s) {</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">return</span> (s ?? <span class="s4">""</span>).toString();</p>
+<p class="p2"><span class="Apple-converted-space">  </span>}</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span><span class="s1">function</span> burnInShift() {</p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span>// tiny random horizontal shift so OLED pixels aren’t identical forever</p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">return</span><span class="s5"> </span><span class="s4">`</span>${Math.floor(Math.random() * <span class="s3">9</span>) - <span class="s3">4</span>}<span class="s4">px`</span><span class="s5">;</span></p>
+<p class="p2"><span class="Apple-converted-space">  </span>}</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span><span class="s1">function</span> eventToRow(ev) {</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">const</span> comp = ev.competitions?.[<span class="s3">0</span>];</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">const</span> comps = comp?.competitors || [];</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">const</span> a = comps[<span class="s3">0</span>], b = comps[<span class="s3">1</span>];</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">if</span> (!a || !b) <span class="s1">return</span> <span class="s7">null</span>;</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">const</span> aName = a.team?.shortDisplayName || a.team?.displayName || <span class="s4">"Team"</span>;</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">const</span> bName = b.team?.shortDisplayName || b.team?.displayName || <span class="s4">"Team"</span>;</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">const</span> aScore = a.score ?? <span class="s4">""</span>;</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">const</span> bScore = b.score ?? <span class="s4">""</span>;</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">const</span> status = comp?.status?.type?.shortDetail || ev.status?.type?.shortDetail || <span class="s4">""</span>;</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">const</span> state = comp?.status?.type?.state || ev.status?.type?.state || <span class="s4">""</span>; <span class="s6">// pre, in, post</span></p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">let</span> scoreText = <span class="s4">""</span>;</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">if</span> (aScore !== <span class="s4">""</span> &amp;&amp; bScore !== <span class="s4">""</span>) scoreText = <span class="s4">`</span><span class="s2">${aScore}</span><span class="s4"> - </span><span class="s2">${bScore}</span><span class="s4">`</span>;</p>
+<p class="p5"><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span>// Labels</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">let</span> pill = <span class="s4">""</span>;</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">if</span><span class="s5"> (state === </span>"in"<span class="s5">) pill = </span>`&lt;span class="pill"&gt;LIVE&lt;/span&gt;`<span class="s5">;</span></p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">else</span><span class="s5"> </span><span class="s1">if</span><span class="s5"> (state === </span>"post"<span class="s5">) pill = </span>`&lt;span class="pill"&gt;FINAL&lt;/span&gt;`<span class="s5">;</span></p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">const</span> detail = comp?.venue?.fullName ? <span class="s4">`@ </span><span class="s2">${comp.venue.fullName}</span><span class="s4">`</span> : <span class="s4">""</span>;</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">return</span> {</p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>leftHtml<span class="s5">: </span><span class="s4">`</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span>&lt;div class="teams"&gt;</span>${safeText(aName)}<span class="s4"> vs </span>${safeText(bName)}<span class="s4"> </span>${pill}<span class="s4">&lt;/div&gt;</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub"&gt;<span class="s2">${safeText(detail)}</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`<span class="s5">,</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span></span>rightHtml<span class="s5">: </span><span class="s4">`</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="score"&gt;<span class="s2">${safeText(scoreText) || </span>"—"<span class="s2">}</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="state"&gt;<span class="s2">${safeText(status) || </span>""<span class="s2">}</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>`</p>
+<p class="p2"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><span class="Apple-converted-space">  </span>}</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span><span class="s1">async</span> <span class="s1">function</span> loadLeague(league) {</p>
+<p class="p2"><span class="Apple-converted-space">    </span>$(<span class="s4">"leagueName"</span>).textContent = league.key;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>$(<span class="s4">"leagueSub"</span>).textContent = <span class="s4">"Updating…"</span>;</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">try</span> {</p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">const</span> res = <span class="s1">await</span> fetch(league.url, { <span class="s3">cache</span>: <span class="s4">"no-store"</span> });</p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">if</span> (!res.ok) <span class="s1">throw</span> <span class="s1">new</span> Error(<span class="s4">`HTTP </span><span class="s2">${res.status}</span><span class="s4">`</span>);</p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">const</span> data = <span class="s1">await</span> res.json();</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">const</span> events = Array.isArray(data.events) ? data.events : [];</p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">const</span> rows = [];</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">for</span> (<span class="s1">const</span> ev <span class="s1">of</span> events) {</p>
+<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">const</span> row = eventToRow(ev);</p>
+<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">if</span> (row) rows.push(row);</p>
+<p class="p2"><span class="Apple-converted-space">        </span><span class="s1">if</span> (rows.length &gt;= MAX_ROWS) <span class="s1">break</span>;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>}</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">      </span>renderRows(rows, events.length);</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">      </span>$(</span>"leagueSub"<span class="s5">).textContent = events.length ? </span>"Live + upcoming"<span class="s5"> : </span>"No events right now"<span class="s5">;</span></p>
+<p class="p2"><span class="Apple-converted-space">    </span>} <span class="s1">catch</span> (e) {</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">      </span>$(</span>"list"<span class="s5">).innerHTML = </span>`&lt;div class="err"&gt;Couldn’t load <span class="s2">${league.key}</span>. Check Wi-Fi.&lt;/div&gt;`<span class="s5">;</span></p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">      </span>$(</span>"leagueSub"<span class="s5">).textContent = </span>"Error fetching data"<span class="s5">;</span></p>
+<p class="p2"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">  </span>}</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span><span class="s1">function</span> renderRows(rows, totalEvents) {</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">if</span> (!rows.length) {</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">      </span>$(</span>"list"<span class="s5">).innerHTML = </span>`&lt;div class="status"&gt;No games found.&lt;/div&gt;`<span class="s5">;</span></p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">return</span>;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span>$(<span class="s4">"list"</span>).innerHTML = rows.map(r =&gt; <span class="s4">`</span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="row" style="--shift:<span class="s2">${burnInShift()}</span>"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;<span class="s2">${r.leftHtml}</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="right"&gt;<span class="s2">${r.rightHtml}</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span>`</span>).join(<span class="s4">""</span>);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>}</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">  </span><span class="s1">function</span> startTimers() {</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">if</span> (refreshTimer) clearInterval(refreshTimer);</p>
+<p class="p2"><span class="Apple-converted-space">    </span>refreshTimer = setInterval(() =&gt; loadLeague(ROTATION[idx]), REFRESH_MS);</p>
+<p class="p5"><br></p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">if</span> (rotateTimer) clearInterval(rotateTimer);</p>
+<p class="p2"><span class="Apple-converted-space">    </span>rotateTimer = setInterval(() =&gt; {</p>
+<p class="p2"><span class="Apple-converted-space">      </span>idx = (idx + <span class="s3">1</span>) % ROTATION.length;</p>
+<p class="p2"><span class="Apple-converted-space">      </span>loadLeague(ROTATION[idx]);</p>
+<p class="p2"><span class="Apple-converted-space">    </span>}, ROTATE_MS);</p>
+<p class="p5"><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span>// update “next rotation” countdown</p>
+<p class="p2"><span class="Apple-converted-space">    </span><span class="s1">let</span> t = ROTATE_MS / <span class="s3">1000</span>;</p>
+<p class="p2"><span class="Apple-converted-space">    </span>setInterval(() =&gt; {</p>
+<p class="p2"><span class="Apple-converted-space">      </span>t = (t - <span class="s3">1</span>);</p>
+<p class="p2"><span class="Apple-converted-space">      </span><span class="s1">if</span> (t &lt;= <span class="s3">0</span>) t = ROTATE_MS / <span class="s3">1000</span>;</p>
+<p class="p1"><span class="s5"><span class="Apple-converted-space">      </span>$(</span>"nextUp"<span class="s5">).textContent = </span>`Next rotation in <span class="s2">${t}</span>s`<span class="s5">;</span></p>
+<p class="p2"><span class="Apple-converted-space">    </span>}, <span class="s3">1000</span>);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>}</p>
+<p class="p5"><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">  </span></span>// Clock</p>
+<p class="p2"><span class="Apple-converted-space">  </span>setInterval(() =&gt; $(<span class="s4">"clock"</span>).textContent = fmtClock(), <span class="s3">1000</span>);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>$(<span class="s4">"clock"</span>).textContent = fmtClock();</p>
+<p class="p5"><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">  </span></span>// Boot</p>
+<p class="p2"><span class="Apple-converted-space">  </span>loadLeague(ROTATION[idx]);</p>
+<p class="p2"><span class="Apple-converted-space">  </span>startTimers();</p>
+<p class="p3"><span class="s5">&lt;/</span>script<span class="s5">&gt;</span></p>
+<p class="p3"><span class="s5">&lt;/</span>body<span class="s5">&gt;</span></p>
+<p class="p3"><span class="s5">&lt;/</span>html<span class="s5">&gt;</span></p>
+</body>
+</html>
